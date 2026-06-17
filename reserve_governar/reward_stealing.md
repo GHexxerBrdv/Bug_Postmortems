@@ -1,6 +1,6 @@
 # [M] A malicious user can steal rewards from the other users
 
-## Summary
+## Description
 
 The `StakingVault::_accrueRewards` does not accrue rewards for the users for the reward tokens which are not registered in the `RewardTokenRegistry`.
 

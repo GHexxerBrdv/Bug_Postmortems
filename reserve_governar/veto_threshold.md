@@ -1,6 +1,6 @@
 # [M] Veto threshold can never be reached
 
-## Summary
+## Description
 
 In `ReserveOptimisticGovernor` the the veto threshold is calculated as following:
 

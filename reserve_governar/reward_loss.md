@@ -1,6 +1,6 @@
 # [M] user can loss their rewards by transferring zero amount of vault shares
 
-## Summary
+## Description
 
 In `StakingVault` allows zero share transfer by not reverting while passing zero amount in `_update` function.
 
