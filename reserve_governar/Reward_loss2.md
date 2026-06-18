@@ -20,3 +20,8 @@ function _accrueRewards(address _caller, address _receiver) internal {
 ```
 
 as shown in the code above, the function skips reward accrual for reward tokens that are removed. due to this the reward accrual for the token will be skipped for passive users who has already accrued rewards for the token since last they have interacted. However the readme is stating that user can accrue their already accrued reward for the token but it is only true for the active user who has interacted with the vault since the token was removed. other users reward accrual will be skipped and they lose the reward.
+
+## Root Cause
+
+> [!NOTE]
+> The protocol was restricting reward accrual for the token which was removed from the token registry, However when passive user tried to accru rewards for the token, it silantly skipped. causing the reward loss for the passive users, However the loss can be temporary if the token is re added later, since reward accrual will be resumed when the token is re added. but if the token is never re added, then passive users permanently lose their rewards for the token.

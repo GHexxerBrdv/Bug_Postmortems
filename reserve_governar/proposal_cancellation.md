@@ -18,3 +18,8 @@ _saveProposal(proposalData, proposalCores[newProposalId], governor.votingDelay()
 ```
 
 However after transitioning to the standard proposal, the optimistic proposer can still cancel the proposal. since the cancle function requires the proposal creator to cancel the proposal (also admin can cancel the proposal). This allows proposal cancellation of standard proposal which is vetoed as optimistic proposal.
+
+## Root Cause
+
+> [!NOTE]
+> After automatically creating standerd proposal, it was assigning the creator of the standard proposal same as optimistic proposer. Thet allowed the full controll of standard proposal to the optimistic proposer.
